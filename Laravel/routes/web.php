@@ -19,16 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/test', 'SampleTestCntroller@index')->name('test');
-Route::get('sample/mailable/send', 'SampleController@SampleTest');
+//Route::get('sample/mailable/send', 'SampleController@SampleTest');
 
 
 
 // バリデーション
 // アクセス時のルーティング
-Route::get('sample/vali', 'ValiController@index');
+Route::get('/sample/login', 'LoginController@index');
 // フォーム送信時のルーティング
 //Route::post('sample/vali', 'ValiController@receiveData');
 //確認画面のルーティング
-Route::post('sample/vali/confirm', 'ValiController@confirm');
+Route::post('sample/confirm', 'LoginController@confirm');
 // 完了画面のルーティング
-Route::post('sample/vali/complete', 'ValiController@complete');
+Route::post('sample/complete', 'LoginController@complete');

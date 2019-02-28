@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ValiController extends Controller
+class LoginController extends Controller
 {
   //入力画面
   public function index()
   {
-    return view('sample_vali');
+    return view('index');
   }
 /*
   //バリデーション
@@ -22,7 +22,7 @@ class ValiController extends Controller
     return view('sample_vali', ['status' => true]);
   }
 */
-  //確認画面
+  //確認
   public function confirm(Request $request)
   {
     $data = $request->all();
